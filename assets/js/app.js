@@ -30,3 +30,29 @@ slide.owlCarousel({
 		 }
  }
 })
+
+var autoSwitch = new TimelineMax({repeat: -1})
+  .add(jump, 1.0);
+function creativeHover(event) {
+    if (event.type === 'mouseenter') {
+        autoSwitch.pause();
+        logProgress();
+    } else {
+        autoSwitch.play(0);
+        logProgress();
+    }
+}
+
+function jump() {
+  new TimelineMax()
+    .to('#btn', 0.3, {y: -15, ease: Power2.easeOut})
+    .to('#btn', 0.6, {y: 0, ease: Bounce.easeOut})
+}
+
+function logProgress(){
+  console.log('progress: ' + Math.round(autoSwitch.progress() * 100) / 100);
+}
+
+
+
+$('#btn').hover(creativeHover);
