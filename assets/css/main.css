@@ -20,9 +20,7 @@ video{
   z-index: 0;
 }
 
-.header__background{
-  z-index: 1000;
-}
+
 .header__shuffletitle{
 	color: white;
 	font-size: 700%;
