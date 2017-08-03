@@ -33,7 +33,7 @@ video{
   letter-spacing: 16px;
   font-family:'Cutive Mono', monospace;
   text-align: center;
-  z-index: 3000;
+  z-index: 1000;
 }
 
 .header__navbar{
